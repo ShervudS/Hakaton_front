@@ -1,0 +1,20 @@
+@mixin scrollbar($width: 0.4rem, $color: $color-yellow) {
+    &::-webkit-scrollbar {
+        width: $width;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        width: 100%;
+        border-radius: 0;
+        background: rgba($color, 0.9);
+
+        &:hover {
+            background: $color;
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        width: 100%;
+        background: $color-gray2;
+    }
+}

@@ -1,0 +1,45 @@
+@import '_styles/variables';
+@import '_styles/mixins';
+
+.formContent{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.submitBtn {
+  width: 100%;
+  background: linear-gradient(105.8deg, #2FD6ED -11.87%, #0393E3 141.35%);
+  border-radius: 1rem;
+  padding: 1.5rem;
+
+  transition: opacity 0.2s ease, box-shadow 0.2s ease,
+  border-color 0.2s ease;
+
+  span:first-child {
+    font: normal 700 2rem/120% $font-primary;
+    text-transform: capitalize;
+    color: $color-white;
+    transition: color 0.2s ease;
+  }
+
+  &:disabled {
+    background: #D5E1E7;
+    pointer-events: none;
+  }
+
+  /* media hover */
+  @media (hover: hover) {
+    &:hover,
+    &:active {
+    }
+  }
+  @media (hover: none) {
+    -webkit-tap-highlight-color: transparent;
+
+    &:active {
+      background-color: lighten($color-yellow, 2.5%);
+      transition: unset;
+    }
+  }
+}

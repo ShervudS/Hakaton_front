@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "_images/*": [
+                "src/assets/images/*"
+            ],
+            "_components/*": [
+                "src/components/*"
+            ],
+            "_configs/*": [
+                "src/configs/*"
+            ],
+            "_redux/*": [
+                "src/redux/*"
+            ],
+            "_styles/*": [
+                "src/styles/*"
+            ],
+            "_utils/*": [
+                "src/utils/*"
+            ],
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "public"
+    ]
+}

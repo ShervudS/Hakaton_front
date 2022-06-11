@@ -1,0 +1,32 @@
+@function getFontSource($basePath, $family, $weight, $style, $extensions) {
+    $result: ();
+    $fontName: '';
+    $url: '';
+
+    @if ($style == normal) {
+        $fontName: '#{$family}-#{$weight}';
+    } @else {
+        $fontName: '#{$family}-#{$weight}-#{$style}';
+    }
+
+    @each $ext in $extensions {
+        $url: '#{$basePath}/#{$family}/#{$fontName}.#{$ext}';
+        $result: append($result, url($url), 'comma');
+    }
+
+    @return $result;
+}
+
+@mixin font-face($family, $weight, $style: normal) {
+    $basePath: '/src/assets/fonts';
+    $extensions: 'woff', 'woff2';
+    $src: getFontSource($basePath, $family, $weight, $style, $extensions);
+
+    @font-face {
+        font-family: $family;
+        src: $src;
+        font-weight: $weight;
+        font-style: $style;
+        font-display: block;
+    }
+}

@@ -1,0 +1,57 @@
+@use 'sass:math';
+
+// == [breakpoints]
+// phones
+$xs: 320px;
+$xsm: 375px;
+$sm: 576px;
+
+// tablets
+$md: 768px;
+
+// laptops
+$lg: 1024px;
+
+// desktops
+$xl: 1280px;
+$xl2: 1440px;
+$xl3: 1600px;
+$ul: 1920px;
+
+$breakpoints: ($xs, $xsm, $sm, $md, $lg, $xl, $xl2, $xl3, $ul);
+
+// == [media queries]
+@mixin media-width($width, $type: max) {
+    @if $type == max {
+        $width: $width - 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+        @content;
+    }
+}
+
+@mixin media-height($height, $type: max) {
+    @if $type == max {
+        $height: $height - 1px;
+    }
+
+    @media (#{$type}-height: $height) {
+        @content;
+    }
+}
+
+// == [strip-unit function]
+@function strip-unit($value) {
+    @return math.div($value, $value * 0 + 1); // return string!
+}
+
+// == [export variables to js]
+:export {
+    /* stylelint-disable property-no-unknown */
+    xl: strip-unit($xl);
+    lg: strip-unit($lg);
+    sm: strip-unit($sm);
+    xsm: strip-unit($xsm);
+    /* stylelint-enable */
+}

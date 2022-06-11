@@ -1,0 +1,14 @@
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ],
+    "plugins": [
+        [
+            "babel-plugin-react-css-modules",
+            {
+                "generateScopedName": "[hash:base64:5]"
+            }
+        ]
+    ]
+}

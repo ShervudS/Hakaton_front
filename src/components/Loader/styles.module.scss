@@ -1,0 +1,32 @@
+@import '_styles/variables';
+@import '_styles/mixins';
+
+.loader {
+    position: relative;
+    display: block;
+    padding-right: 5rem;
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        top: 0rem;
+        right: 0;
+        display: block;
+        border: 0.3rem solid transparent;
+        border-radius: 50%;
+        animation: load 2s linear infinite;
+        border-color: $color-white $color-white $color-white transparent;
+        @include size(2.8rem);
+    }
+}
+
+@keyframes load {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

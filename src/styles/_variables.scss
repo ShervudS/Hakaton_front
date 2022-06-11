@@ -1,0 +1,30 @@
+// == [colors]
+$color-white: #FBFBFB;
+$color-black: #171717;
+$color-gray1: #dbdbdb;
+$color-gray2: #bdbdbd;
+$color-gray3: #828282;
+$color-gray4: #333;
+$color-red: #d91b1b;
+$color-yellow: #ffd342;
+$color-green: #dcf3e7;
+$color-green2: #9dcfc1;
+$color-blue: #dbf0ff;
+$color-blue2: #74c4ff;
+$color-violet: #efe3ff;
+$color-violet2: #b68cfc;
+$color-beige: #fff7f6;
+$color-beige2: #f5d5e0;
+
+// == [fonts]
+$font-primary: 'Montserrat', sans-serif;
+
+// == [borders]
+$border-white: 1px solid $color-white;
+$border-gray: 1px solid $color-gray2;
+$border-red: 1px solid $color-red;
+
+// == [z-index]
+$z-policy: 30;
+$z-message: 20;
+$z-form: 10;
