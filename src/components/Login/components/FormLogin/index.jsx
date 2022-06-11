@@ -1,8 +1,9 @@
 import React, {useState} from "react";
+import {useNavigate} from "react-router-dom";
 import {Field, reduxForm} from "redux-form";
 import {renderField} from './renderField';
 import {FORM_NAME} from "_configs/main_config";
-import { validateForm } from '_utils/helpers';
+import {validateForm} from '_utils/helpers';
 import styles from './styles.module.scss';
 
 const FormButtonSubmit = ({isFormLoading, invalid, pristine}) => {
@@ -27,11 +28,14 @@ const validate = (values, {dirty}) => {
 
 const Form = (props) => {
     const {handleSubmit, invalid, pristine} = props;
+    const navigate = useNavigate();
     const [isFormLoading, setIsFormLoading] = useState(false);
 
     const logIn = (values) => {
-        console.log(values)
         setIsFormLoading(true)
+        console.log(values)
+        navigate('/catalog')
+        setIsFormLoading(false)
     }
 
     return (

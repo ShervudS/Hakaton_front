@@ -1,6 +1,6 @@
 import React from 'react';
 import {Routes, Route, Link} from "react-router-dom";
-import {PrivatePerson} from '_components/PrivatePerson';
+import {Catalog} from '_components/Catalog';
 import {Login} from "_components/Login";
 
 // === [redux]
@@ -20,7 +20,7 @@ export const App = () => (
 
         <Routes>
             <Route path="/" element={<Login/>}/>
-            <Route path="catalog" element={<PrivatePerson/>}/>
+            <Route path="catalog" element={<Catalog/>}/>
         </Routes>
     </Provider>
 )

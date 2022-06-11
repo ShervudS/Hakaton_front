@@ -4,7 +4,7 @@ import classNames from "classnames";
 import styles from './styles.module.scss'
 import {MainLayout} from "_components/_hoc/MainLayout";
 
-export const PrivatePerson = () => {
+export const Catalog = () => {
     const {isVisibleNavigation} = useSelector(state => state.main)
 
     const catalogNavClass = classNames(styles.catalogNav, {
