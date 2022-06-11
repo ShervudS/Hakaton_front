@@ -1,0 +1,49 @@
+{
+  "icons": [
+    {
+      "src": "./assets/icons/icon_1024x1024.89f846e87643c18eea92af82ee3bd68f.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./assets/icons/icon_512x512.b10d85230e8de58e312b6af0750aa0b4.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon_384x384.f03c4048be2c46ab7c6fd38c7bb8ed4b.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon_256x256.a9a59973c355444f1e98b23661f5f57c.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon_192x192.c3895f826c029c33b43b562823143984.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon_1024x1024.ffe6cefc86dc3b040c7d4d784362f354.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "name": "Импорт.нет",
+  "short_name": "Импорт.нет",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/",
+  "id": "/",
+  "description": "Импорт.нет",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}

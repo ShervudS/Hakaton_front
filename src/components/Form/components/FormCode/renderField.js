@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import InputMask from 'react-input-mask';
 import classNames from 'classnames';
-import { AppIcon } from '_components/AppIcon';
+import { AppIcon } from '_components/_ui/AppIcon';
 import { setPolicyOpened } from '_redux/reducers/main_reducer';
 import styles from '../../styles.module.scss';
 

@@ -13,13 +13,14 @@ import '_styles/globals.scss';
 
 export const App = () => (
     <Provider store={store}>
-        <Link to="/dashboard">dashboard</Link>
         <Link to="/">Home</Link>
+
+        <Link to="/catalog">dashboard</Link>
 
 
         <Routes>
             <Route path="/" element={<Login/>}/>
-            <Route path="dashboard" element={<PrivatePerson/>}/>
+            <Route path="catalog" element={<PrivatePerson/>}/>
         </Routes>
     </Provider>
 )

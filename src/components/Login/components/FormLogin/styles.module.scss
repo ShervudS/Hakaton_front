@@ -1,10 +1,38 @@
 @import '_styles/variables';
 @import '_styles/mixins';
 
-.formContent{
+.formContent {
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem;
+}
+
+.fields {
+  margin-bottom: 4rem;
+}
+
+.field {
+  padding: 1.3rem 2.3rem;
+  background-color: #F5F7FA;
+  border-radius: 1rem;
+
+  & + .field {
+    margin-top: 2rem;
+  }
+}
+
+
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font: normal 400 1.6rem/1.5 $font-primary;
+  color: $color-gray3;
+
+  &::placeholder {
+    color: $color-gray3;
+  }
 }
 
 .submitBtn {

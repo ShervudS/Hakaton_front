@@ -1,15 +1,10 @@
 import React from "react";
 import {Container} from "_components/Container";
-import {AppIcon} from "_components/AppIcon";
-import {FormLogin} from "_components/Login/components/FormLogin";
-import AppLogo from '_images/icons/logo.svg'
-import styles from './styles.modules.scss';
+import {AppIcon} from "_components/_ui/AppIcon";
 import {InlineBtn} from "_components/_ui/InlineBtn";
-
-
-// const LoginLink = ({url, label}) => (
-//     <Link className={styles.link} to={url}>{label}</Link>
-// )
+import {FormLogin} from "_components/Login/components/FormLogin";
+import AppLogo from '_images/logo.svg'
+import styles from './styles.modules.scss';
 
 export const Login = () => {
     return (
@@ -30,7 +25,6 @@ export const Login = () => {
                     </button>
 
                     <InlineBtn label="Не удаётся войти?"/>
-
                 </div>
             </Container>
         </div>

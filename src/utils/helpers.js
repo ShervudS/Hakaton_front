@@ -4,10 +4,6 @@ module.exports = {
         const phoneMinLength = 11;
         const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
-        if (!values.name) {
-            errors.name = 'Пожалуйста, введите имя';
-        }
-
         if (!values.phone) {
             errors.phone = 'Пожалуйста, введите номер телефона';
         } else if (values.phone.length < phoneMinLength) {
@@ -19,9 +15,6 @@ module.exports = {
             errors.email = 'Неверный формат почты';
         }
 
-        if (!values.terms) {
-            errors.terms = 'Подтвердите согласие на обработку';
-        }
 
         return errors;
     },
