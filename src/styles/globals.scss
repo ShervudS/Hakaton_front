@@ -5,67 +5,57 @@
 
 // == [global styles]
 html {
-    height: 100%;
-    font-size: 10px; // = 1rem
+  height: 100%;
+  font-size: 10px; // = 1rem
 }
 
 body {
-    overflow-x: hidden;
-    height: 100%;
-    background-color: $color-white;
-    font: normal 400 1rem/1.2 $font-primary;
-    color: $color-black;
-    scroll-behavior: smooth;
+  overflow-x: hidden;
+  height: 100%;
+  background-color: $color-white;
+  font: normal 400 1rem/1.2 $font-primary;
+  color: $color-black;
+  scroll-behavior: smooth;
 
-    & > div[id='app'] {
-        overflow-y: hidden;
-        height: 100%;
-    }
+  & > div[id='app'] {
+    height: 100%;
+  }
 }
 
 // == [input styles]
 input,
 textarea,
 select {
-    border-radius: 0;
-    caret-color: $color-black;
-    -webkit-appearance: none;
+  border-radius: 0;
+  caret-color: $color-black;
+  -webkit-appearance: none;
 
-    &:-webkit-autofill {
-        &,
-        &:hover,
-        &:focus {
-            box-shadow: 0 0 0 100px $color-white inset;
-            background-color: $color-white !important;
-            filter: none;
-            caret-color: $color-black;
-            transition: background-color 10000s ease-in-out 0s;
-            -webkit-text-fill-color: $color-black;
+  &:-webkit-autofill {
+    &,
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 100px $color-white inset;
+      background-color: $color-white !important;
+      filter: none;
+      caret-color: $color-black;
+      transition: background-color 10000s ease-in-out 0s;
+      -webkit-text-fill-color: $color-black;
 
-            &::first-line {
-                // the same as input font
-                font: normal 400 2.4rem/1.3 $font-primary;
-
-                /* media */
-                @include media-width($xl2) {
-                    font-size: 1.6rem;
-                }
-                @include media-width($xsm) {
-                    font-size: 1.4rem;
-                    line-height: 1.4;
-                }
-            }
-        }
+      &::first-line {
+        // the same as input font
+        font: normal 400 2.4rem/1.3 $font-primary;
+      }
     }
+  }
 }
 
 // == [touch effects]
 @media (hover: none) {
-    button,
-    label,
-    a {
-        -webkit-tap-highlight-color: rgba($color-blue, 0.15);
-    }
+  button,
+  label,
+  a {
+    -webkit-tap-highlight-color: rgba($color-blue, 0.15);
+  }
 }
 
 /* 

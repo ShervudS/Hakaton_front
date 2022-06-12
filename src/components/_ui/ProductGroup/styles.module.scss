@@ -1,0 +1,42 @@
+@import '_styles/variables';
+@import '_styles/mixins';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  + .wrapper {
+    margin-top: 1rem;
+  }
+
+  button {
+    position: relative;
+    font: normal 400 1.4rem/150% $font-primary;
+    color: $color-black;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 60%;
+      right: -2rem;
+      border: 5px solid transparent;
+      border-top: 8px solid #4F4F4F;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.title {
+  margin-bottom: 1rem;
+  font: normal 700 1.4rem/150% $font-primary;
+  color: $color-black;
+}
+
+.list {
+  margin-bottom: .5rem;
+}
+
+.item {
+  font: normal 400 1.4rem/150% $font-primary;
+  color: $color-black;
+}

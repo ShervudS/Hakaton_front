@@ -1,0 +1,20 @@
+@import '_styles/variables';
+@import '_styles/mixins';
+
+.testLabel {
+  position: relative;
+
+  :hover{
+    &::after {
+      content: 'Это тестовая версия, логика не реализована';
+      position: absolute;
+      bottom: -2rem;
+      left: 0;
+      background-color: #daa83e;
+      padding: .5rem 1rem;
+      font: normal 400 1rem/120% $font-primary;
+      color: $color-white;
+      border-radius: .5rem;
+    }
+  }
+}

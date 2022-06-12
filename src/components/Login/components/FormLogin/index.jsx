@@ -34,7 +34,7 @@ const Form = (props) => {
     const logIn = (values) => {
         setIsFormLoading(true)
         console.log(values)
-        navigate('/catalog')
+        navigate('/categories')
         setIsFormLoading(false)
     }
 

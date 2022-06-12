@@ -12,7 +12,7 @@
 }
 
 .field {
-  padding: 1.3rem 2.3rem;
+  position: relative;
   background-color: #F5F7FA;
   border-radius: 1rem;
 
@@ -23,16 +23,52 @@
 
 
 .input {
+  position: relative;
+  z-index: 5;
+  padding: 1.3rem 2.3rem;
   width: 100%;
   border: none;
   outline: none;
-  background-color: inherit;
+  background-color: #F5F7FA;
   font: normal 400 1.6rem/1.5 $font-primary;
   color: $color-gray3;
 
   &::placeholder {
     color: $color-gray3;
   }
+
+  &:-webkit-autofill {
+    &,
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 100px #F5F7FA inset;
+      background-color: #F5F7FA !important;
+      filter: none;
+      caret-color: $color-black;
+      transition: background-color 10000s ease-in-out 0s;
+      -webkit-text-fill-color: $color-black;
+
+      &::first-line {
+        // the same as input font
+        font: normal 400 1.6rem/1.5 $font-primary;
+      }
+    }
+  }
+}
+
+.label {
+  position: absolute;
+  z-index: 5;
+  top: -1rem;
+  left: 2rem;
+}
+
+.error {
+  position: absolute;
+  z-index: 5;
+  bottom: -1rem;
+  left: 0;
+  color: $color-red;
 }
 
 .submitBtn {

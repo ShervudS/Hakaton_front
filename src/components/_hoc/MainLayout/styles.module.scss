@@ -132,8 +132,12 @@
 
   & > div {
     display: flex;
-    justify-content: flex-start;
-    font: normal 400 2rem/150% $font-primary;
+    justify-content: center;
+    font: normal 700 2rem/150% $font-primary;
     color: $color-black;
   }
+}
+
+.main {
+  padding-bottom: 3.3rem;
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-// import InputMask from 'react-input-mask';
 import classNames from 'classnames';
 import styles from './styles.module.scss';
 
@@ -31,7 +30,7 @@ export const renderField = (props) => {
     };
 
     // errors
-    const inputError = !active && error && type !== 'checkbox' && (
+    const inputError = !active && error && (
         <span className={styles.error}>{error}</span>
     );
 

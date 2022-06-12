@@ -4,7 +4,7 @@
     "description": "hakaton",
     "main": "main.js",
     "scripts": {
-        "start": "webpack serve --open --config webpack.dev.js",
+        "start": "node main.js",
         "develop": "webpack serve --open --config webpack.dev.js",
         "build": "webpack --progress --config webpack.prod.js",
         "build-prod": "npm run build && npm run gzip",
